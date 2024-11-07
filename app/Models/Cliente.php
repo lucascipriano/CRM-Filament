@@ -12,6 +12,8 @@ class Cliente extends Model
 
     protected $guarded = ['id'];
 
+
+
     public function trabalhos()
     {
         return $this->hasMany(Trabalhos::class);
