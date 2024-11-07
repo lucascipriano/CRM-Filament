@@ -19,6 +19,9 @@ class TrabalhosResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getNavigationBadge(): ?string{
+        return static::getModel()::where('concluido', false)->count();
+    }
     public static function form(Form $form): Form
     {
         return $form
