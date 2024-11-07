@@ -18,7 +18,7 @@ class TrabalhosResource extends Resource
     protected static ?string $model = Trabalhos::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationGroup = 'Serviços';
     public static function getNavigationBadge(): ?string{
         return static::getModel()::where('concluido', false)->count();
     }
