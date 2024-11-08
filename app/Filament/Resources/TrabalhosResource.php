@@ -19,6 +19,11 @@ class TrabalhosResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Serviços';
+
+    public static function query(): Builder
+    {
+        return parent::query()->where('user_id', auth()->id());
+    }
     public static function getNavigationBadge(): ?string{
         return static::getModel()::where('concluido', false)->count();
     }
@@ -26,6 +31,7 @@ class TrabalhosResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Hidden::make('user_id')->default(fn () => auth()->id()),
                 Forms\Components\Select::make('cliente_id')
                     ->relationship('cliente', 'name') // Campo que será exibido e relacionado
                     ->getOptionLabelFromRecordUsing(fn($record) => $record->name) // Exibe o campo 'name' do cliente

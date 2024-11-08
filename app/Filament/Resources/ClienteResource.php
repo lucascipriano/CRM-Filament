@@ -10,8 +10,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ClienteResource extends Resource
 {
@@ -21,13 +21,23 @@ class ClienteResource extends Resource
     protected static ?string $navigationGroup = 'Serviços';
 
 
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->where('user_id',auth()->id());
+    }
+    public static function query(): Builder
+    {
+        return parent::query()->where('user_id', auth()->id());
+    }
     public static function getNavigationBadge(): ?string{
         return static::getModel()::count();
     }
     public static function form(Form $form): Form
     {
+
         return $form
             ->schema([
+                Forms\Components\Hidden::make('user_id')->default(fn () => auth()->id()),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
