@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id'); // Definir user_id como obrigatório
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Definir chave estrangeira com o users
             $table->string('name');
             $table->date('birth_date');
             $table->string('email')->nullable();

@@ -10,11 +10,9 @@ class CreateTrabalhosTable extends Migration
     {
         Schema::create('trabalhos', function (Blueprint $table) {
             $table->id();
-            // Definindo o relacionamento com 'clientes'
+
             $table->foreignId('cliente_id')->constrained('clientes')->onDelete('cascade');
-
-            // Definindo o relacionamento com 'tipos_trabalhos'
-
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('tipo_de_trabalho')->nullable();
             $table->date('data_realizacao');
             $table->boolean('concluido')->default(false)->nullable();
