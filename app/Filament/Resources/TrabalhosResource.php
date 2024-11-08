@@ -42,9 +42,12 @@ class TrabalhosResource extends Resource
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\DatePicker::make('data_realizacao')
-                    ->required(),
+                    ->required()
+                    ->native(false)
+                    ->locale('pt_BR'),
                 Forms\Components\TextInput::make('valor')
                     ->numeric()
+                    ->prefix('R$')
                     ->default(null),
                 Forms\Components\Toggle::make('concluido'),
 

@@ -10,7 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Container\Attributes\Auth;
 use Illuminate\Database\Eloquent\Builder;
 
 class ClienteResource extends Resource
@@ -29,9 +28,9 @@ class ClienteResource extends Resource
     {
         return parent::query()->where('user_id', auth()->id());
     }
-    public static function getNavigationBadge(): ?string{
-        return static::getModel()::count();
-    }
+//    public static function getNavigationBadge(): ?string{
+//        return static::getModel()::count();
+//    }
     public static function form(Form $form): Form
     {
 
@@ -42,7 +41,14 @@ class ClienteResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\DatePicker::make('birth_date')
-                    ->required(),
+                    ->label('Data de Nascimento')
+                    ->required()
+                    ->nullable()
+                    ->displayFormat('d/m/Y')  // Exibe a data no formato d/m/Y
+                    ->native(false)
+                    ->locale('pt_BR')
+                    ->default(now()),    // Formata a data internamente antes de salvar
+
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->maxLength(255)

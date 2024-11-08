@@ -19,6 +19,15 @@ Próximos passos:
     - Fazer conexão para buscar os clientes e fazer com que um cliente seja dono de uma consulta
     - Atualizar o form
 
+## O que ele anota
+- Nome
+- Data de nascimento
+- Local para descrever odu/orixa/exu
+- Orientações
+- Data de retorno
+- Valor da consulta 
+
+
 ## 2.1 Pensamentos
     - Como irei marcar início da consulta e data de retorno? 
     - Como Separar as consultas já realizadas? Check de finalizado?
