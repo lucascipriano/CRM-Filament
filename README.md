@@ -13,13 +13,13 @@ Próximos passos:
     - ~~Filhos de santo~~
 > Filho de santo fazer por último? Já que é a terceira taks
 
-# 2. Criar parte de consulta (Serviços)
+# 2. Criar parte de consulta (Serviços) ✅
 - Utilizar vídeo que o Rodrigo mandou para
     - Modelar o banco de dados com migrations e models
     - Fazer conexão para buscar os clientes e fazer com que um cliente seja dono de uma consulta
     - Atualizar o form
 
-## O que ele anota
+## O que ele anota ✅
 - Nome
 - Data de nascimento
 - Local para descrever odu/orixa/exu
@@ -28,7 +28,7 @@ Próximos passos:
 - Valor da consulta 
 
 
-## 2.1 Pensamentos
+## 2.1 Pensamentos ✅
     - Como irei marcar início da consulta e data de retorno? 
     - Como Separar as consultas já realizadas? Check de finalizado?
 
