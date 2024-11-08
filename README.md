@@ -33,5 +33,7 @@ Próximos passos:
     - telefone
     - detalhes falando sobre
 
-
+# 4. Estrutura de equipes
+- Cada usuário pode pertencer a uma equipe e as equipes possam ter múltiplos usuários.
+[link](https://chatgpt.com/c/672e406b-e854-8013-82d4-bef871f2c6a9)
 ![img.png](img.png)
