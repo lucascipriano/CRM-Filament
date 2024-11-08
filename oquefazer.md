@@ -61,8 +61,9 @@ public static function query(): Builder
 ```
 
 5. Garanta o user_id ao Criar Novos Registros
-   Ao criar um novo Cliente ou Trabalho, preencha automaticamente o user_id com o ID do usuário logado:
+   Ao criar um novo Cliente ou Trabalho, preencha automaticamente o user_id com o ID do usuário logado
 
+```php
 // Em ClienteResource e TrabalhoResource
 public static function form(Form $form): Form
 {
@@ -75,5 +76,30 @@ Forms\Components\TextInput::make('name')->required(),
 $model->user_id = auth()->id(); // Define o user_id do usuário logado
 });
 }
+```
 
 Esses passos permitem que cada usuário veja apenas os registros que eles próprios criaram, proporcionando um sistema de dados segregado dentro do Filament.
+
+
+---
+
+# 1. Migration a cima ^
+- Fazer com que cada usuário tenha seus próprios
+  - Clientes
+  - Trabalhos
+  - ~~Filhos de santo~~
+> Filho de santo fazer por último? Já que é a terceira taks
+
+# 2. Criar parte de consulta (Serviços)
+ - Utilizar vídeo que o Rodrigo mandou para
+   - Modelar o banco de dados com migrations e models
+   - Fazer conexão para buscar os clientes e fazer com que um cliente seja dono de uma consulta
+   - Atualizar o form
+
+# 3. Criar parte interna do terreiro
+ - Cadastro de membros (filhos de santo)
+   - nome
+   - idade (data de nascimento)
+   - email
+   - telefone
+   - detalhes falando sobre
