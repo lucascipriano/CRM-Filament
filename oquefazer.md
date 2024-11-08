@@ -96,6 +96,12 @@ Esses passos permitem que cada usuário veja apenas os registros que eles própr
    - Fazer conexão para buscar os clientes e fazer com que um cliente seja dono de uma consulta
    - Atualizar o form
 
+## 2.1 Pensamentos
+    - Como irei marcar início da consulta e data de retorno? 
+    - Como Separar as consultas já realizadas? Check de finalizado?
+    
+
+
 # 3. Criar parte interna do terreiro
  - Cadastro de membros (filhos de santo)
    - nome
