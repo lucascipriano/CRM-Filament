@@ -2,7 +2,9 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Widgets\StatsClients;
 use App\Filament\Widgets\Statsentry;
+use App\Filament\Widgets\TotalEmCaixaWidget;
 use Filament\Forms\Form;
 use Filament\Pages\Dashboard as BaseDashboard;
 
@@ -27,5 +29,11 @@ class Dashboard extends BaseDashboard
             ]);
     }
 
-
+    public function getWidgets(): array
+    {
+        return [
+            StatsClients::class,
+            TotalEmCaixaWidget::class,
+        ];
+    }
 }
