@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Filament\Widgets;
 
 use App\Models\Cliente;
+use App\Models\Consulta;
 use App\Models\Trabalhos;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -11,20 +11,35 @@ class StatsClients extends BaseWidget
 {
     protected function getStats(): array
     {
-        return array(
-            Stat::make('Total de clientes',Cliente::count())
-                ->icon('heroicon-o-users')
-                ->description('Total de clientes cadastrados no sistema'),
-            Stat::make('Total recebido pelos clientes', Trabalhos::where('concluido', true)->sum('valor'))
+        return [
+            // Total recebido por trabalhos concluídos do usuário logado
+            Stat::make('Total recebido por trabalhos', 'R$ ' . number_format(
+                    Trabalhos::where('user_id', auth()->id())
+                        ->where('concluido', true)
+                        ->sum('valor'),
+                    2, ',', '.'))
                 ->icon('heroicon-o-credit-card')
-                ->color('success')
+                ->color('warning')
                 ->description('Total de valores recebidos pelos trabalhos realizados pelos clientes'),
-            Stat::make('Total a receber dos clientes', Trabalhos::where('concluido', false)->sum('valor'))
+
+            // Total recebido por consultas do usuário logado
+            Stat::make('Total recebido por consultas', 'R$ ' . number_format(
+                    Consulta::where('user_id', auth()->id())
+                        ->sum('consultation_fee'),
+                    2, ',', '.'))
                 ->icon('heroicon-o-credit-card')
-                ->description('Valor em espera de trabalhor a serem concluidos.')
-                ->color('danger')
-        );
+                ->color('warning')
+                ->description('Total de valores recebidos pelas consultas realizadas pelos clientes'),
+
+            // Total pendente a receber de trabalhos do usuário logado
+            Stat::make('Total pendente a receber', 'R$ ' . number_format(
+                    Trabalhos::where('user_id', auth()->id())
+                        ->where('concluido', false)
+                        ->sum('valor'),
+                    2, ',', '.'))
+                ->icon('heroicon-o-credit-card')
+                ->description('Valor em espera de trabalhos a serem concluídos.')
+                ->color('danger'),
+        ];
     }
-
-
 }
