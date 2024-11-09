@@ -34,13 +34,27 @@ Próximos passos:
 
 
 
-# 3. Criar parte interna do terreiro
+
+
+# 3. Criar parte interna do terreiro ✅
 - Cadastro de membros (filhos de santo)
     - nome
     - idade (data de nascimento)
     - email
     - telefone
     - detalhes falando sobre
+
+Problemas: 
+    - Terá parte de filados também? ✅
+    - Fazer um form com boolean se é medium? Se for false ele é um afiliado só  ✅
+
+## Como ajustar para por contribuição?
+    - Recupero filiado_id, 
+    - Data da contribuição - horário
+    - Input com metodo da contribuição
+    - Campo descrição
+        
+
 
 # 4. Estrutura de equipes
 - Cada usuário pode pertencer a uma equipe e as equipes possam ter múltiplos usuários.
