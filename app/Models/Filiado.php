@@ -15,6 +15,12 @@ class Filiado extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function mensalidades()
+    {
+        return $this->hasMany(Mensalidade::class);
+    }
+
+
     protected static function booted()
     {
         static::addGlobalScope('user', function (Builder $builder) {
