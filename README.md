@@ -60,3 +60,7 @@ Problemas:
 - Cada usuário pode pertencer a uma equipe e as equipes possam ter múltiplos usuários.
 [link](https://chatgpt.com/c/672e406b-e854-8013-82d4-bef871f2c6a9)
 ![img.png](img.png)
+
+# 5. Dashboard nova
+ - Criar do zero a dashboard
+ - [link](https://chatgpt.com/c/67314de1-d7f8-8013-bce2-6426c89b705e)
