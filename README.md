@@ -33,9 +33,6 @@ Próximos passos:
     - Como Separar as consultas já realizadas? Check de finalizado?
 
 
-
-
-
 # 3. Criar parte interna do terreiro ✅
 - Cadastro de membros (filhos de santo)
     - nome
@@ -48,7 +45,7 @@ Problemas:
     - Terá parte de filados também? ✅
     - Fazer um form com boolean se é medium? Se for false ele é um afiliado só  ✅
 
-## Como ajustar para por contribuição?
+## Como ajustar para por contribuição? ✅
     - Recupero filiado_id, 
     - Data da contribuição - horário
     - Input com metodo da contribuição
