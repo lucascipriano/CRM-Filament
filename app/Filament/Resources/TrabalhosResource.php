@@ -23,9 +23,11 @@ class TrabalhosResource extends Resource
     {
         return parent::query()->where('user_id', auth()->id());
     }
-    public static function getNavigationBadge(): ?string{
-        return static::getModel()::where('concluido', false)->count();
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::where('concluido', false)->count();
     }
+
     public static function form(Form $form): Form
     {
         return $form
