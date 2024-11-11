@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Widgets\StatsMensalidade;
 use App\Filament\Widgets\StatsClients;
 use App\Filament\Widgets\Statsentry;
 use App\Filament\Widgets\TotalEmCaixaWidget;
@@ -34,6 +35,7 @@ class Dashboard extends BaseDashboard
         return [
             StatsClients::class,
             TotalEmCaixaWidget::class,
+            StatsMensalidade::class
         ];
     }
 }
