@@ -6,9 +6,12 @@ use App\Models\Consulta;
 use App\Models\Trabalhos;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
-
 class StatsClients extends BaseWidget
 {
+    protected int | string | array $columnSpan = 3;
+
+
+
     protected function getStats(): array
     {
         return [
