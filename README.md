@@ -52,6 +52,10 @@ Problemas:
     - Campo descrição
         
 
+# 3.2 Filiados
+    - Alterar nome mensalidade para algo que tenha mais haver com "entrada"?
+    - Alterar boolean pago para mensalidade? Separando
+    - Criar uma área de saída? Anotações dos valores e criar um widget de saída e total que tem em caixa.
 
 # 4. Estrutura de equipes
 - Cada usuário pode pertencer a uma equipe e as equipes possam ter múltiplos usuários.
