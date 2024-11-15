@@ -14,20 +14,11 @@
             <!-- Botão Get Started -->
             <button
                 class="group inline-flex items-center justify-center rounded-full py-3 px-6 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-600 text-white hover:bg-indigo-700 active:bg-indigo-800 focus-visible:outline-indigo-600">
-                Get started
+                Comece agora
                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
             </button>
-
-            <!-- Botão Live Demo -->
-            <button
-                class="group inline-flex ring-1 ring-gray-200 items-center justify-center rounded-full py-3 px-6 text-sm font-semibold focus:outline-none hover:ring-gray-300 active:ring-gray-400 text-gray-700">
-                Live demo
-            </button>
         </div>
-    </div>
-    <div class="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl">
-        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-indigo-200 to-indigo-400 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
     </div>
 </div>
