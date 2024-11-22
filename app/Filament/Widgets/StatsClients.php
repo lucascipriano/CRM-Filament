@@ -22,7 +22,7 @@ class StatsClients extends BaseWidget
                         ->sum('valor'),
                     2, ',', '.'))
                 ->icon('heroicon-o-credit-card')
-                ->color('warning')
+                ->color('success')
                 ->description('Total de valores recebidos pelos trabalhos realizados pelos clientes'),
 
             // Total recebido por consultas do usuário logado
@@ -31,7 +31,7 @@ class StatsClients extends BaseWidget
                         ->sum('consultation_fee'),
                     2, ',', '.'))
                 ->icon('heroicon-o-credit-card')
-                ->color('warning')
+                ->color('success')
                 ->description('Total de valores recebidos pelas consultas realizadas pelos clientes'),
 
             // Total pendente a receber de trabalhos do usuário logado
@@ -42,7 +42,7 @@ class StatsClients extends BaseWidget
                     2, ',', '.'))
                 ->icon('heroicon-o-credit-card')
                 ->description('Valor em espera de trabalhos a serem concluídos.')
-                ->color('danger'),
+                ->color('warning'),
         ];
     }
 }

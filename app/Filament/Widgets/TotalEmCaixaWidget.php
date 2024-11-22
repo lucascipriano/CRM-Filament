@@ -31,7 +31,7 @@ class TotalEmCaixaWidget extends BaseWidget
         return [
             // Exibindo o total combinado
             Stat::make('Total em caixa', 'R$ ' . number_format($totalEmCaixa, 2, ',', '.'))
-                ->icon('heroicon-o-banknotes')
+                ->icon('TotalEmCaixaWidget.phpbanknotes')
                 ->description('Total combinado de consultas e trabalhos.')
                 ->color('success'),
         ];
