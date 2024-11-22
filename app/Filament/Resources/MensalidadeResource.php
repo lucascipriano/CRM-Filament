@@ -45,6 +45,7 @@ class MensalidadeResource extends Resource
                 Forms\Components\TextInput::make('valor')
                     ->label('Valor')
                     ->numeric()
+                    ->prefix('R$ ')
                     ->required(),
 
                 // Campo para data de referência
@@ -75,6 +76,7 @@ class MensalidadeResource extends Resource
                 // Coluna de valor
                 Tables\Columns\TextColumn::make('valor')
                     ->label('Valor')
+                    ->prefix('R$ ')
                     ->sortable(),
 
                 // Coluna de data de referência

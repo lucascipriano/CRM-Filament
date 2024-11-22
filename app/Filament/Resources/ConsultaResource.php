@@ -28,10 +28,7 @@ class ConsultaResource extends Resource
     {
         return parent::query()->where('user_id', auth()->id());
     }
-//    public static function getNavigationBadge(): ?string
-//    {
-//        return static::getModel()::where('user_id', auth()->id())->count();
-//    }
+
 
 
     public static function form(Form $form): Form
@@ -115,9 +112,6 @@ class ConsultaResource extends Resource
     {
         return $table
             ->columns([
-//                Tables\Columns\TextColumn::make('user_id')
-//                    ->numeric()
-//                    ->sortable(),
 
                 // Exibir o nome do cliente em vez de apenas o ID
                 Tables\Columns\TextColumn::make('cliente.name')

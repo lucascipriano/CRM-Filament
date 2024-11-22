@@ -73,7 +73,8 @@ class TrabalhosResource extends Resource
                 Tables\Columns\IconColumn::make('concluido')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('valor')
-                    ->numeric()
+                    ->label('Valor')
+                    ->prefix('R$ ')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
