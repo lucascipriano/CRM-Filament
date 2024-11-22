@@ -12,6 +12,9 @@ class Navbar extends Component
     public function toggleMenu(){
         $this->isOpen = !$this->isOpen;
     }
+   public function redirectToAdmin(){
+        return redirect('/admin');
+   }
     public function render()
     {
         return view('livewire.navbar');
