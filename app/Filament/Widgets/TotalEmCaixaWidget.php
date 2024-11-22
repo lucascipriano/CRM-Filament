@@ -3,6 +3,8 @@
 namespace App\Filament\Widgets;
 
 use App\Models\Consulta;
+use App\Models\Filiado;
+use App\Models\Mensalidade;
 use App\Models\Trabalhos;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -18,9 +20,13 @@ class TotalEmCaixaWidget extends BaseWidget
         $totalTrabalhos = Trabalhos::where('user_id', auth()->id())
             ->where('concluido', true)
             ->sum('valor');
+        $filiadoIds = Filiado::where('user_id', auth()->id())->pluck('id');
+        $totalMensalidadesPagas = Mensalidade::whereIn('filiado_id', $filiadoIds)
+            ->where('pago', true)
+            ->sum('valor');
 
         // Calculando o total combinado
-        $totalEmCaixa = $totalConsultas + $totalTrabalhos;
+        $totalEmCaixa = $totalConsultas + $totalTrabalhos + $totalMensalidadesPagas;
 
         return [
             // Exibindo o total combinado
