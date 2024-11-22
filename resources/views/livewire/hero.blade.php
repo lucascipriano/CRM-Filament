@@ -3,12 +3,12 @@
         <h1 class="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-gray-900 sm:text-7xl">
             Gerencie o seu
             <span class="relative whitespace-nowrap text-indigo-600">
-                <span class="relative">terreiro</span>
+                <span class="relative">templo</span>
             </span>
             da melhor forma
         </h1>
         <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-            Organize seu terreiro com facilidade: gerencie clientes/trabalhos, filhos de santo e o financeiro em um único lugar.
+            Organize seu templo com facilidade, gerenciando clientes, trabalhos, filhos de santo e o financeiro em um único lugar.
         </p>
         <div class="mt-10 flex justify-center gap-x-6">
             <!-- Botão Get Started -->
@@ -20,9 +20,13 @@
                 </svg>
             </button>
 
-            <button class="group inline-flex ring-1 ring-gray-200 items-center justify-center rounded-full py-3 px-6 text-sm font-semibold focus:outline-none hover:ring-gray-300 active:ring-gray-400 text-gray-700">
-                Conheça mais sobre
-            </button>
+            <a href="https://www.instagram.com/lucasncipriano"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="group inline-flex ring-1 ring-gray-200 items-center justify-center rounded-full py-3 px-6 text-sm font-semibold focus:outline-none hover:ring-gray-300 active:ring-gray-400 text-gray-700">
+                Entre em contato
+            </a>
+
         </div>
     </div>
 </div>
