@@ -52,7 +52,7 @@ Problemas:
     - Campo descrição
         
 
-# 3.2 Filiados
+# 3.2 Filiados ✅
     - Alterar nome mensalidade para algo que tenha mais haver com "entrada"?
     - Alterar boolean pago para mensalidade? Separando
     - Criar uma área de saída? Anotações dos valores e criar um widget de saída e total que tem em caixa.
@@ -62,6 +62,9 @@ Problemas:
 [link](https://chatgpt.com/c/672e406b-e854-8013-82d4-bef871f2c6a9)
 ![img.png](img.png)
 
-# 5. Dashboard nova
+# 5. Dashboard nova ✅
  - Criar do zero a dashboard
  - [link](https://chatgpt.com/c/67314de1-d7f8-8013-bce2-6426c89b705e)
+
+# Opções
+ - Utilizar [daisyui](https://daisyui.com/)?
