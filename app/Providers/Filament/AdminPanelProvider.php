@@ -26,7 +26,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('Egbé Àyé - CRM')
+            ->brandName('Egbé Àyé')
             ->colors([
                 'primary' => Color::Rose,
             ])
