@@ -17,9 +17,14 @@ use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
+
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $model = User::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Adminstração';
+    protected static ?string $navigationLabel = 'Usuários';
+
 
     public static function form(Form $form): Form
     {
@@ -37,7 +42,11 @@ class UserResource extends Resource
                     ->password()
                     ->dehydrateStateUsing(fn ($state) => Hash::make($state))
                     ->dehydrated(fn ($state) => filled($state))
-                    ->required(fn (string $context): bool => $context === 'create')
+                    ->required(fn (string $context): bool => $context === 'create'),
+                Forms\Components\Select::make('roles')
+                ->multiple()
+                ->relationship('roles', 'name')
+                ->preload(),
             ]);
     }
 
